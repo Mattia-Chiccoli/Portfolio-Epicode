@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#logo {
+  margin: 20px 0 20px 0;
+  width: 250px;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: antiquewhite;
+  height: 50px;
+  border-top: 2px solid #f90;
+}
+#nav p {
+  color: rgb(13, 105, 93);
+  font-size: large;
+}
+.container {
+  width: 600px;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+h1 {
+  margin-top: 60px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.main-image {
+  margin-top: 20px;
+}
+.main-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px -5px;
+}
+.caption-gray {
+  margin-top: 15px;
+  text-align: center;
+  color: gray;
+}
+.featured {
+  margin-top: 20px;
+  border-left: 2px solid #f90;
+  padding-left: 20px;
+  margin-bottom: 60px;
+}
+.featured p {
+  color: rgb(255, 81, 0);
+}
+.external-links:visited {
+  color: rgb(13, 105, 93);
+}
+.splitter {
+  margin: 20px 0 30px 0;
+  border: 1px solid rgb(197, 247, 240);
+}
+.list {
+  margin-left: 5%;
+
+  > li {
+    margin: 10px 10px;
+  }
+}
+.item-description {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+body {
+  background-color: #eaeded;
+}
+.logo {
+  background-color: #222f3e;
+  > img {
+    height: 50px;
+    padding: 5px 0 5px 30px;
+  }
+}
+.link {
+  display: inline-block;
+  text-decoration: none;
+}
+.navbar {
+  background-color: #354758;
+  height: 30px;
+  > a {
+    color: white;
+    padding: 5px 0 5px 20px;
+  }
+}
+.main-container {
+  width: 84%;
+  margin: 0 auto;
+}
+.shop-all {
+  margin-top: 30px;
+  text-align: center;
+  background-color: #f56600;
+  > a {
+    padding: 5px;
+    color: white;
+  }
+}
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 30px;
+  background-image: url(assets/bg-div_home.png);
+
+  height: 200px;
+  > div {
+    h1 {
+      margin-bottom: 20px;
+    }
+    > p {
+      text-align: center;
+    }
+  }
+}
+.cards-container {
+  padding: 15px;
+  margin-top: 30px;
+  background-color: white;
+  > p {
+    > a {
+      font-weight: bold;
+      color: #006d81;
+      margin-left: 15px;
+    }
+  }
+}
+.cards-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  > img {
+    object-fit: cover;
+    border-radius: 10px;
+    width: 23%;
+    height: 230px;
+    box-shadow: 5px 5px 15px -5px;
+  }
+}
+.fig-height {
+  margin-top: 30px;
+  > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.caption {
+  text-align: center;
+  > a {
+    font-weight: bold;
+    margin-left: 15px;
+    color: #007185;
+  }
+}
+.extra-section-card {
+  position: relative;
+  width: 24%;
+  padding: 20px 30px;
+  background-color: white;
+  > h3 {
+    text-align: center;
+  }
+  > a {
+    color: #006d81;
+  }
+}
+.extra-section-imgs-wrapper {
+  position: relative;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 30px 10px 40px 10px;
+}
+.extra-section-img {
+  width: 100%;
+}
+.new-icon-container {
+  position: relative;
+}
+.new-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 10px;
+  right: -10px;
+}
+.back-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  height: 30px;
+  background-color: #354758;
+  > a {
+    color: white;
+  }
+}
+.logo-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222f3e;
+  > img {
+    height: 100px;
+    padding: 20px;
+  }
+}
