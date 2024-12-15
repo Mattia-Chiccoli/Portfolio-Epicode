@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card-container {
+  position: relative;
+  width: 400px;
+  > img {
+    width: 100%;
+  }
+}
+.save-button {
+  color: white;
+  border-radius: 50px;
+  background-color: red;
+  border: none;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  display: none;
+  cursor: pointer;
+}
+.save-btn-container {
+  position: absolute;
+  padding: 10px;
+  top: -45px;
+  right: 25px;
+}
+.bottom-card-container {
+  position: absolute;
+  padding: 10px;
+  display: flex;
+  bottom: -20px;
+  left: 15px;
+}
+.link {
+  background-color: white;
+  color: black;
+  opacity: 0.7;
+  border-radius: 50px;
+  display: none;
+}
+.bigger-link {
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  width: 250px;
+}
+.bigger-link::before {
+  content: "";
+  display: inline-block;
+  background-image: url(assets/arrow-right-solid.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 20px;
+}
+.smaller-link {
+  margin-left: 10px;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.card-container:hover .save-button {
+  display: inline-block;
+}
+.card-container:hover .save-btn-container {
+  transition: 1s;
+  top: 45px;
+}
+.card-container:hover .link {
+  display: inline-block;
+}
+.card-container:hover .bottom-card-container {
+  transition: 1s;
+  bottom: 20px;
+  left: 15px;
+}
