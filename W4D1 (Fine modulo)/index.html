@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Home - Netflix</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="hero-background">
+            <!-- Navbar -->
+            <nav class="nav nav-background">
+                <div class="w-100 d-flex justify-content-between align-items-center">
+                    <div class="navbar-left d-flex justify-content-center align-items-center">
+                        <a href="#">
+                            <img class="navbar-logo me-3"
+                                src="/Module 3/Week 4/W4D1 (Fine modulo)/assets/imgs/Netflix_Logo_RGB.png" alt="">
+                        </a>
+                        <div class="navbar-dropdown d-lg-none">
+                            <a class="text-decoration-none" href="#">Sfoglia</a>
+                            <ul class="navbar-dropdown-content list-unstyled py-3">
+                                <li>
+                                    <a class="navbar-dropdown-item actual" href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a class="navbar-dropdown-item" href="#">Serie TV</a>
+                                </li>
+                                <li>
+                                    <a class="navbar-dropdown-item" href="#">Film</a>
+                                </li>
+                                <li>
+                                    <a class="navbar-dropdown-item" href="#">Nuovi e popolari</a>
+                                </li>
+                                <li>
+                                    <a class="navbar-dropdown-item" href="#">La mia lista</a>
+                                </li>
+                                <li>
+                                    <a class="navbar-dropdown-item" href="#">Sfoglia per lingua</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="d-none d-md-none d-lg-flex navs gap-3 list-unstyled m-0">
+                            <li>
+                                <a class="navs-item actual" href="#">Home</a>
+                            </li>
+                            <li>
+                                <a class="navs-item" href="#">Serie TV</a>
+                            </li>
+                            <li>
+                                <a class="navs-item" href="#">Film</a>
+                            </li>
+                            <li>
+                                <a class="navs-item" href="#">Nuovi e popolari</a>
+                            </li>
+                            <li>
+                                <a class="navs-item" href="#">La mia lista</a>
+                            </li>
+                            <li>
+                                <a class="navs-item" href="#">Sfoglia per lingua</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="navbar-right d-flex justify-content-center align-items-center gap-4 ">
+                        <i id="search-icon" class="bi bi-search nav-icons"></i>
+                        <div class="navbar-search-wrapper">
+                            <i class="bi bi-search nav-icons d-inline-block ps-1 pe-3"></i>
+                            <input class="navbar-search" type="text" placeholder="Titoli, persone, generi">
+                        </div>
+                        <a class="d-none d-md-none d-lg-inline-block navs-item" style="color: white; font-weight: 400;"
+                            href="#">Bambini</a>
+                        <i class="bi bi-bell nav-icons">
+                            <div class="notifications">
+                                <p>Nessun avviso recente</p>
+                            </div>
+                        </i>
+                        <div class="propic-dropdown">
+                            <a class="text-decoration-none" href="#">
+                                <img class="navbar-propic"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229"
+                                    alt="">
+                            </a>
+                            <ul class="propic-dropdown-content list-unstyled">
+                                <li>
+                                    <div class="propic-dropdown-item">
+                                        <img src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABayHoYv1Vtqd01nZ5LAVArW8b7QFNzwpoPJlEUP8ZK2eNsgrS-ufIHK_4j2XKRizUxIws86jSvBaCz_TsFNckGvY8gM4yP4.png?r=8df"
+                                            alt="">
+                                        <a href="#">Mattia</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propic-dropdown-item">
+                                        <img src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABeukSeWjyiUEgKzcXwSdeS8ul5WNIOTMt6QsgVlobiBA8SKShw4Mfb2QdD6R_i0TZZ3fr4409fGv4q1kXrmpUSIevJDc90M.png?r=ec4"
+                                            alt="">
+                                        <a href="#">Bambini</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <hr class="first dropdown-divider">
+                                </li>
+                                <li>
+                                    <div class="propic-dropdown-item">
+                                        <i class="bi bi-pencil propic-icons"></i>
+                                        <a href="#">Gestisci i profili</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propic-dropdown-item">
+                                        <i class="bi bi-person-square propic-icons"></i>
+                                        <a href="#">Trasferisci profilo</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propic-dropdown-item">
+                                        <i class="bi bi-person propic-icons"></i>
+                                        <a href="#">Account</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="propic-dropdown-item">
+                                        <i class="bi bi-question-circle propic-icons"></i>
+                                        <a href="#">Centro assistenza</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <hr class="second dropdown-divider">
+                                </li>
+                                <li>
+                                    <div class="propic-dropdown-item justify-content-center pb-3">
+                                        <a href="#">Esci da Netflix</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Hero Section -->
+            <div class="hero-opacity-layer"></div>
+            <div class="hero-wrapper">
+                <div class="hero-title d-flex flex-column justify-content-center align-items-center gap-1">
+                    <img alt="" class="title-logo img-fluid"
+                        src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABbVCHgW9-CWb9l0x-nZ5C_4SRabletsiqzunTqPaAtGsmqai18L_gp_Q6JWGJ9mgByDvP7vuC27SRyKGBufgEwVbmOu1iui6NDJiiyrYT1z5pXva3OrrMGImj5RB-N4QZFJr2obRmY4MuNz-W-g_jvOKGCcOPkM8IC45Xkb_IZs_POYzUt9wAw.webp?r=fb2"
+                        title="">
+                    <p class="hero-description">Dichiarata morta, Bárbara ricompare per smascherare il tradimento della
+                        famiglia, mentre vive un triangolo amoroso con il marito disonesto e il detective che indaga sul
+                        suo caso.</p>
+                </div>
+                <div class="hero-btns d-flex gap-2">
+                    <button class="play-btn btn">
+                        <i class="bi bi-play-fill hero-icons"></i>
+                        <span>Riproduci</span>
+                    </button>
+                    <button class="info-btn btn">
+                        <i class="bi bi-info-circle hero-icons"></i>
+                        <span>Altre info</span>
+                    </button>
+                </div>
+
+
+            </div>
+            <div class="side-infos d-flex justify-content-center align-items-center gap-1">
+                <i class="bi bi-arrow-clockwise"></i>
+                <div class="maturity-rating d-flex align-items-center ps-1">
+                    <span>16+</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- News Slider -->
+
+    <div class="container-fluid ps-4 mb-5">
+        <div class="row position-relative">
+            <h3 class="swipers-title">Di Tendenza</h3>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class=" swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSndac-wz2F6lCHBBdQbxBOafx2H5oofP7x7zdqJvqQ5mL25HPnMYWh7LyKbL8hoc9LcZAZMK0zeOPnQgO6BpbsUYIIgUhklpLUlLrfYIO1JLE3WYmskWmn1NzrPXKBml_E09sJS1CtmqmyGviErmhGg9P7NJkruPg8.webp?r=f13"
+                                    alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABfDy3itEHkz_0fXgnHAEPijsRCIvMZPYaKoMb1rYZNyA6gu1JhRR1SXjj3fjddxt4BENcC0Y3Gq3JttBEh_uurqXmE468ATT1RJ-YrTmTTNl5f-STdPoNG7i1Lj4cCPaiVP08Hl4PM4SD5wFG3tubty_618CzxefKBzepirzgoEcYpLR9ZnnJKjzD3Ln-C8.jpg?r=62b"
+                                    alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABarOF9JzADNO-0aMavygTXZEZTJUQhzCD7Bs6d9-bzph77Sq0OUt3gM--Meixw-NzT7_9e918Tl2GdQh9mBG8QjoeeBMhahji7M55lkUMXlrHogiXo4YIEzxe-fddLjW98NF3SS3s0UpWGPcGS_S_-47LzcMBjPu_YPO85KhkTT_wvG3Z75jXjP5e19wm7c.jpg?r=c83"
+                                    alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABfg00PU3GzLRTEnoO1GhINriMJMc09EGfCn8CPLJHj5x8PNgQubkis7RZn4fmy0kzD-rNbMQW31XOvRXT2WPTetTJU-CBf3Yi6gGspHSxoxC9zH1IzHymqNA3JR_HZXeilasBf6pCTnqAGh6Ah_6_h5nkxPgbksYNYDBwCHJ28WMRk6yN-a7z4-9UVnrDjUjUtUncMo4tJB5IPQ0SzNFglNMonmD66D5khP7TBKkbTiGdKxZc-SJdAm2EMLjfWBZ7Bt4SnvnTnjBBnJVY3IBp3aPDgv5H8uGON5jfsxV9tYztpVQR_zJbgJFlJhkjKFA558MDbltzH60LmXahC0oxnA.webp?r=62b"
+                                    alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVsWrQxjY7AmtEB-SpETy7LAll3inswL2E3nVDctCpBtEEv5hJaQltHyDyftF-meys3mwdbrdfpcWeFtK5GdWGa8pItqJou2U1bkL2AiChP5fJvyEXf3OzcDov31u6UVzKOYNx8eJAOlpr4Y7ukLDawfZajEx7E5XiM5d5sDlFQIKVZZEPsSiaVRbsajfZg.jpg?r=007"
+                                    alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYm8ggjyYLzCiFkEddcW3ulkH5F_UaQ6aik67W4YWQP9b1zbTeGIi_54Xx2anSf1pfAzpIxEsXhDRWuE35aYvNv-IjNT0wN8ddjaLw2mHexriFCvj1nO7no-0hLE5YjbQqu6r13FGp3IPLvJm9X8imH1aUH6m4wJi4yxpe69CdbrtEQVUxrjbtWU_NjRvFU.jpg?r=914"
+                                    alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABY49mvG3U4ZhaUKEUuzVwQMmX5fEUqs9WXGiT8_hOu9r97WWxyE_Q3Q9vIATYlzW-WW-bceSh7HmOVnaX0SrpSQuSW6O8uF8w1qMnsr7yTx9GKZL0sBFqD4gvKO_GPB5mHmd-miCT4lF2vrxwBwf4VC_HCTqXVmHAwvji0YQxiRYZ1oc-b93HWK-hLJrGVU.jpg?r=d8a"
+                                    alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABfibygJemc_C8FESKSzwto3YCCt5hpsGTw23U8wg1RAfxxjYuQRqqFOTLDhcIOePOP1gosJAk2i6xlow1VleBo2Oj_VDtoKa00yeqD5HlPp8Cy0scwf3NP8ViLEKZcTH2s77exIOWin1BYHepf8qKc_0VN3olFDxV0dwUk-RexmcomBCAGQoxXcmebyeKUk.jpg?r=c05"
+                                    alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWLpzQA-E8AJgoOV0KYnCohWPVppYEIR8iooLelZPVKkCcfjc2TOL1-IvoOeGmmsiEhv1FcUC6lf-vqR4dJIeh9cbImBX4I7oG0g6xVx0lrNcXxv6G1CU0VNTNr5ynC6IS2qAu6_xxWVQ_7SE_Yug9oV5EHgQJrYl0w.webp?r=080"
+                                    alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABe8U05KxeBdGQk82DfDPFdfQ0qEPZRZRCPOzAZIzOCxvnuGzAd_nm0B4ojmY6SV2V-xyiBLDwBut9y6FyTSK8HJ5jof8pI9dJNjZxqDtQJwcf65tyFC3btNCXs5a5pulrG1fqaZKQL2L2RtYQ6NcRoy9CJJeJJ09os4_Ag5eAwp0J4GNiOe8gZBAlimZUGeWVjMSmohqStMm14O-4jkEqYfamIfOPfnGrz_gFVt_z1RSFbKR-zAOOGqOpcWZzZtzrx4POLlxqH9Cx3p_D6ccphHqiDzH3m4dEdHlIyuTeXzg-cR7lxtlFUj-EjUUmnRM1qDz8OfrA6Qai-eW5tCqLaQaFgY7SQRPEXBFavKVezcUZABhrw.jpg?r=32d"
+                                    alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="row">
+            <h3 class="swipers-title">Guarda Ancora</h3>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid" src="assets/imgs/movies/1.png" alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid" src="assets/imgs/movies/4.png" alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img src="assets/imgs/movies/6.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid" src="assets/imgs/movies/7.png" alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid" src="assets/imgs/movies/8.png" alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid" src="assets/imgs/movies/9.png" alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid" src="assets/imgs/movies/10.png" alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid" src="assets/imgs/movies/11.png" alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid" src="assets/imgs/movies/13.png" alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid" src="assets/imgs/movies/14.png" alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid" src="assets/imgs/movies/15.png" alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="row">
+            <h3 class="swipers-title">Novità su Netflix</h3>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABS2J5y_Fk_K61FVP5Lp0mnhjebkgssLH_L7WxLWh3z9ijpCcGnk6bWdg7mr2YMMvis5-eZXLZxOcdu3fNGsbBpeWfY-tj2oYejeEvcFuoGZIAW5-aggCunKtpoxEf9U3spwLoNyWOStaOrobu28lEvnND8QVeN5A759h0cQLRKyrkb3YsGTlRCgZMvwFGUgMPqi40HbcK-Kwisl3__23YXNK0t_7Nc5g5SkTt-BNtnvH_uUNwWPWTIZhdCWP5PC5_8jLOcVxf2Yobp1NqpXfzqMEV_f19xDydyo.webp?r=6ce"
+                                    alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABQb6eiWlW5JvQ76mufCGGk28Xm0znEmYYIuOjGS50x1iBfKud9Pq5h50tEFAt2IMndESptn89WZFzxG53eDngZxaQstj5KNOehOYYHtMgjw9rY0pLjqo33QSY_iAPkr5fGDT6-ZeZBzbZan_-q1iKVzKSxb1bbahBlEXIF_s_xZB_hoN7XKL-jQB25uYJVHRAykdwZljRlIcSE065ln1QJowHJbAKuYQZnbSrwuDLy6UFF85WaC4ZQCMo8dHvtiriTt8R1iGPLwtRRBFROmgzVM9fJky5SCyZgMdvSQe3bjV-0S-E1ty1fqKK0WYNro.jpg?r=96d"
+                                    alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABfuq4mvlqHH0lnY4oAgohelzQjqmPXRxD4Vku7gQAyqIT9y0liNYw0XWVjR1qEge3OSD9o8S-wCHefGYZGG8H-zv8UmMJRrPV2sjiu62nIHZ1UqDefP5ovvhUuP5bO4RK5eLuOOG0E9KKdsrvWyL2HiDhyyNEmJibmRCoxAYJ0d6yvI4T-KGkHFT_iVJvGVYxtVWuaRvU6MOQ9Qwe7mcCoHdd4p3-14-S0tuKOReHJPXxTqEt17jBhpAZJe1aYMfHVh9GdPkE3_MRFpjZ5JXNkZXwV165BOlcqAStkLK2T_YGJTc_pc9vyr9.jpg?r=e4e"
+                                    alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd5lZ9wnzgFu3b6-M2lS2p9EsPOFRfJGiKexn8zK_8M31-lpJ61jmzz2Cl-lm8R34Waq3mVTcCYYP6eJiKonBZUzjbSLgL9vCdjZR4_BJB7z6JHl0NEL_e_Mqo7RpfcXE2NuNoENjpr6ToZR56cAyH4VUSxUWLq0ZejvGKfFbHQWJRvteGmDykjBWoeFEDBwwxqdVpqQyOfGYWcqKCDH6PF2l1M6bZ8rMZzakzGPynO3FRQYP79xGt8iPgbg0IIMLgFINexveVDUv8waXDddHzUe6OvdgZFDS9c_DnHu22mlVPrTY5UeJDZ010JFVztuofcXwile9lifZCmYeondulIMrwlqSCIMAApNNxWAeHmKIXYrTwRfgTRseIpcv1Mqd9cOhEFewvXAkLl3Bep3_Vfd1vI7jh5crfdmFsIwuyTlGcM3fJKGYDFtMBRdB1mQUnAWKBEIXE-JCe8wYg.jpg?r=7cc"
+                                    alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXoSTUh7dhP4gfq2iIdaZfWFDaTsk3d8JQftN8LN1ytGY3qJt0Ec5KdrRifmzGPSXSFzvGEVO17hafrk0Aa2daFXAg7fFILcXP3fWRKGBANG3MDpge1fMlSXlEfSkDGRmeRaiN2yHHrSM4OFFs4h-aBqJJxo_D0s7_h5KygEqCq6je5NassCpPgpemE99MjLUUBSYAKDw4ndmV50qa7WVFKo1hy48SbUZFFltu3LpqX30tmiS-UWS5sXoPARwpDa5EbVM6ixxPvxXEEKgANp30fQ-iK8O4B_ny0erz4WKaKJ3_oJ5DIv1L_Sh3zphGpxh_CMdzdQqKwC1pvJvYzUgvjWifh3RYkXb3ESMeQTeCxGI7PisLtO4YBPfKj1_dzZ7Zmt52kIavZRKHR2YBMIGzguoCrBl15NcPkXs8huzhnoislzXcrnBFA1qEKtT2u4ONVnF_7KfrPZv54gvg.jpg?r=314"
+                                    alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXQI-aqMdLgdhZ0nGSeuND6HpWMp57hqZuDDrsOEPFmn4Yb2zAc6TW7EyhwpMwRY7Xyh05egtbbMEeal76Gmt5AGXKonEQQQMYqWhQj7EfnoeD0eImJX65LYXGdCzDYFCSJtOTMYc_JY-r3VrsfkWTqDtPvGZCGJxuPKj8mxN_suUpux9EhrLgz6S1gkir4m_mFEmHnwwoko-vyZubVJTo3A5s8bAzxKbf8Dnbpczj1yEPtOwy0HAHYFAga2WB6IlxSr5CXic43v8kZXod30gpcSgpoQ3vS1yQNwItLWBqzZNV4kHjNnLEDelkhepjnxL-3tyVh0lCBrauwI_1XUbXq94ybId_fk37UGYHMpEfqvqyzjioA.jpg?r=b6a"
+                                    alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-card">
+                            <div class="card-img">
+                                <img class="img-fluid"
+                                    src="https://occ-0-784-778.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABf6AIuAL2gFahhCtf63TEtpy6I4WWRLDlFW-nKVEOREoGsk4YemKsvYYWpuR_0_IH4OL1JntxUNfYHpQ8LFIZS_Pda2SGxMZsysbmk4kOSeFEyRO1THslUHcsWt1TEn8GI7TOtipqy74yZQaySXIVDIiLfOtV1UblpkMmrXXTdAF_L92cMgqlj6c9spmQQVci1u_JJgax_fmc-KGkyebakY0QmCsuKnjcZZjyp4dbIwceYwod-P92AqUgqgy_BAHp6uvZC09CaF9UD6q_dwboyit7qzisVP_rkx11tfXZOj4ZRe9eHcYaYQlB9qNUeUUnJmCLIMaJkpAqhtz-XoXVsRRjVjw7WZ39n6bU1_Hin5TKPlo0PaDu7VgBg.jpg?r=8ca"
+                                    alt="">
+                            </div>
+                            <div class="swiper-card-btns d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <button class="card-btn card-play-btn"><i class="bi bi-play-fill"></i></button>
+                                    <button class="card-btn"><i class="bi bi-plus"></i></button>
+                                    <button class="card-btn"><ion-icon name="thumbs-up-outline"></ion-icon></button>
+                                </div>
+                                <div class="more-info">
+                                    <button class="card-btn"><ion-icon name="chevron-down-outline"></ion-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <!-- <div class="swiper-pagination"></div>-->
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container pt-5 ms-4 ">
+            <div class="row">
+                <div class="footer-icons d-flex align-items-center gap-4">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-youtube"></i>
+                </div>
+                <div class="col-6 d-lg-none">
+                    <ul class="footer-list">
+                        <li>Audiodescrizione</li>
+                        <li>Carte regalo</li>
+                        <li>Rapporti con gli investitori</li>
+                        <li>Condizioni di utilizzo</li>
+                        <li>Note legali</li>
+                        <li>Informazioni sull'azienda</li>
+                        <li>Preferenze per la pubblicità</li>
+                    </ul>
+                </div>
+                <div class="col-6 d-lg-none">
+                    <ul class="footer-list">
+                        <li>Centro assistenza</li>
+                        <li>Media Center</li>
+                        <li>Opportunità di lavoro</li>
+                        <li>Privacy</li>
+                        <li>Preferenze per i cookie</li>
+                        <li>Contattaci</li>
+                    </ul>
+                </div>
+                <div class="col-3 d-none d-lg-block">
+                    <ul class="footer-list">
+                        <li>Audiodescrizione</li>
+                        <li>Rapporti con gli investitori</li>
+                        <li>Note legali</li>
+                        <li>Preferenze per la pubblicità</li>
+                    </ul>
+                </div>
+                <div class="col-3 d-none d-lg-block">
+                    <ul class="footer-list">
+                        <li>Centro assistenza</li>
+                        <li>Opportunità di lavoro</li>
+                        <li>Preferenze per i cookie</li>
+                    </ul>
+                </div>
+                <div class="col-3 d-none d-lg-block">
+                    <ul class="footer-list">
+                        <li>Carte regalo</li>
+                        <li>Condizioni di utilizzo</li>
+                        <li>Informazioni sull'azienda</li>
+                    </ul>
+                </div>
+                <div class="col-3 d-none d-lg-block">
+                    <ul class="footer-list">
+                        <li>Media Center</li>
+                        <li>Privacy</li>
+                        <li>Contattaci</li>
+                    </ul>
+                </div>
+                <button class="footer-btn">Codice di servizio</button>
+                <span class="copyright">
+                    <i class="bi bi-c-circle"></i>
+                    1997-2025 Netflix, Inc.</span>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
