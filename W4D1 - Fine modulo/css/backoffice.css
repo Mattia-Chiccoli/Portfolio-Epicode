@@ -1,0 +1,34 @@
+/* Backoffice page */
+.formLabels {
+  color: white;
+}
+.inputContainers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn {
+  color: white;
+}
+.btn:hover {
+  border: 1px solid white;
+  color: white;
+}
+.add-btn {
+  background-color: green;
+}
+.add-btn:hover {
+  background-color: green;
+}
+.edit-btn {
+  background-color: lightgray;
+}
+.edit-btn:hover {
+  background-color: lightgray;
+}
+.delete-btn {
+  background-color: red;
+}
+.delete-btn:hover {
+  background-color: red;
+}
