@@ -1,0 +1,19 @@
+.single-comment-card {
+  background-color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.single-comment-text {
+  font-style: italic;
+  margin-bottom: 0.3rem;
+  color: #34495e;
+}
+
+.single-comment-rate {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #f39c12;
+}

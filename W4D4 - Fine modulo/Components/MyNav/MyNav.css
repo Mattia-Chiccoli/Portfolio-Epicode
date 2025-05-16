@@ -1,0 +1,41 @@
+.my-nav-navbar {
+  padding: 0.5rem 2rem;
+}
+
+.my-nav-brand {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #f39c12;
+}
+
+.my-nav-links {
+  margin-left: 1rem;
+}
+
+.my-nav-link {
+  font-size: 1.1rem;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.my-nav-link:hover {
+  color: #f39c12;
+}
+
+.my-nav-form {
+  max-width: 300px;
+}
+
+.my-nav-input {
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  border: none;
+  box-shadow: 0 0 6px rgba(243, 156, 18, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.my-nav-input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #f39c12;
+}

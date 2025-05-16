@@ -1,0 +1,6 @@
+.comment-area-wrapper {
+  height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
